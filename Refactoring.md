@@ -9,3 +9,11 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+
+1. Modularization: I extracted the logic for determining the partition key into separate functions (getPartitionKey and getHash). This improves readability by breaking down the code into smaller, self-contained units that have clear responsibilities.
+
+2. Early exit: Instead of nesting if statements, I used an early exit approach. By returning early when a condition is met, we can avoid unnecessary nesting and improve the readability of the code.
+
+3. Clear variable names: I renamed the candidate variable to make its purpose clearer. Instead of reassigning the variable multiple times, it is assigned a value once based on the event object or calculated through hashing.
+
+4. Consistent use of braces: I added braces for all if statements, even when they have a single statement. This improves the code's consistency and makes it less prone to errors when modifying the code in the future.
